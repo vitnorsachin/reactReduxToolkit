@@ -2,7 +2,6 @@ import React from "react";
 import DeleteAllUser from "./DeleteAllUser";
 import styled from "styled-components";
 import userSlice from "../store/slice/UserSlice";
-console.log(userSlice())
 
 const UserDetails = () => {
   return (
