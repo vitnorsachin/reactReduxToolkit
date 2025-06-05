@@ -1,14 +1,14 @@
 import React from "react";
-import DeleteAllUser from "./DeleteAllUser";
 import styled from "styled-components";
 import { fakeUserData } from "../api";
-import { useDispatch } from "react-redux";           // step 5
-import { addUser } from "../store/slice/UserSlice";  // step 5
+import { useDispatch } from "react-redux"; // step 5
+import { addUser } from "../store/slice/UserSlice"; // step 5
 import DisplayUsers from "../components/DisplayUsers"; // step 6
 
 const UserDetails = () => {
-  const dispatch = useDispatch();                    // step 5
-  const addNewUser = (name) => {                     // stpe 2. get data to click addNewUser button(add-btn)
+  const dispatch = useDispatch(); // step 5
+  
+  const addNewUser = (name) => {  // stpe 2. get data to click addNewUser button(add-btn)
     dispatch(addUser(name));
   };
 
@@ -25,11 +25,12 @@ const UserDetails = () => {
           </button>
         </div>
         <ul>
-          <DisplayUsers/>
+          <DisplayUsers />
         </ul>
         <hr />
-        <button className="btn delete-btn">Delete All Users</button>
-        {/* <DeleteAllUser/> */}
+        <button className="btn delete-btn" >
+          Delete All Users
+        </button>
       </div>
     </Wrapper>
   );
