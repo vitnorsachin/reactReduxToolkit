@@ -5,7 +5,7 @@ const userSlice = createSlice({
   initialState: [],
 
   reducers: {
-    
+
     addUser(state, action) {
       state.push(action.payload);
     },
@@ -18,7 +18,11 @@ const userSlice = createSlice({
       return [];
     },
   },
-
+  extraReducers(builder){
+    builder.addCase(userSlice.actions.clearAllUser, () => {
+      return [];
+    })
+  }
 });
 
 export default userSlice.reducer;
